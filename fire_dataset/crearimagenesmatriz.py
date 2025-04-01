@@ -39,12 +39,12 @@ def generar_imagenes_sinteticas(cantidad=500, tamano=64, carpeta='fire_dataset')
     if not os.path.exists(carpeta):
         os.makedirs(carpeta)
 
-    for i in tqdm(range(cantidad), desc="🔥 Generando imágenes"):
+    for i in tqdm(range(cantidad), desc="Generando imágenes"):
         matriz = generar_matriz_simulada(tamano)
         nombre = os.path.join(carpeta, f"img_{i:03}.png")
         guardar_imagen(matriz, nombre)
 
-    print(f"\n✅ Se han generado {cantidad} imágenes en la carpeta '{carpeta}'")
+    print(f"\nSe han generado {cantidad} imágenes en la carpeta '{carpeta}'")
 
 if __name__ == '__main__':
     generar_imagenes_sinteticas()
