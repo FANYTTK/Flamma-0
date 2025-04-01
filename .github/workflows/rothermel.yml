@@ -1,1 +1,26 @@
+name: Ejecutar modelo de Rothermel
 
+on:
+  workflow_dispatch:  # Te permite correrlo manualmente
+
+jobs:
+  run-model:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar repositorio
+        uses: actions/checkout@v3
+
+      - name: Configurar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Instalar dependencias
+        run: |
+          pip install -r requirements.txt || true
+
+      - name: Ejecutar simulación de Rothermel
+        run: |
+          cd backend
+          python test_rothermel.py
