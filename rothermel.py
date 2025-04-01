@@ -56,12 +56,12 @@ class ModeloRothermel:
         return round(R, 4)
 
     def mostrar_detalles(self):
-        print("🧪 Parámetros usados en la simulación:")
-        print(f"  🔥 Temperatura: {self.temperatura}°C")
-        print(f"  💧 Humedad: {self.humedad}%")
-        print(f"  🌬️ Viento: {self.viento} m/s")
-        print(f"  ⛰️ Pendiente: {self.pendiente}°")
-        print(f"  🧪 Oxigenación: {self.oxigenacion}%")
-        print(f"  🌲 Combustible: {self.combustible}")
-        print(f"  📈 Velocidad estimada del fuego: {self.calcular_velocidad_propagacion()} m/min")
+        print("Parámetros usados en la simulación:")
+        print(f"  Temperatura: {self.temperatura}°C")
+        print(f"  Humedad: {self.humedad}%")
+        print(f"  Viento: {self.viento} m/s")
+        print(f"  Pendiente: {self.pendiente}°")
+        print(f"  Oxigenación: {self.oxigenacion}%")
+        print(f"   Combustible: {self.combustible}")
+        print(f"  Velocidad estimada del fuego: {self.calcular_velocidad_propagacion()} m/min")
 
