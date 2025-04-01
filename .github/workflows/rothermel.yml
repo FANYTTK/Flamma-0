@@ -1,7 +1,7 @@
 name: Ejecutar modelo de Rothermel
 
 on:
-  workflow_dispatch:  # Te permite correrlo manualmente desde GitHub
+  workflow_dispatch:  
 
 jobs:
   run-model:
