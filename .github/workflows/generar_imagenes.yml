@@ -22,7 +22,7 @@ jobs:
 
       - name: Ejecutar generador de imágenes
         run: |
-          python generar_imagenes_desde_matriz.py
+          python crearimagenesmatriz.py
 
       - name: Guardar imágenes como artifact
         uses: actions/upload-artifact@v3
