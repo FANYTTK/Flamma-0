@@ -1,7 +1,7 @@
 name: Ejecutar modelo de Rothermel
 
 on:
-  workflow_dispatch:  # Te permite correrlo manualmente
+  workflow_dispatch:  # Te permite correrlo manualmente desde GitHub
 
 jobs:
   run-model:
@@ -22,5 +22,5 @@ jobs:
 
       - name: Ejecutar simulación de Rothermel
         run: |
-          cd backend
           python test_rothermel.py
+
