@@ -1,0 +1,31 @@
+name: Generar imágenes sintéticas
+
+on:
+  workflow_dispatch:  # Te permite ejecutarlo manualmente
+
+jobs:
+  generar-imagenes:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar repositorio
+        uses: actions/checkout@v3
+
+      - name: Configurar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Instalar dependencias
+        run: |
+          pip install matplotlib tqdm numpy
+
+      - name: Ejecutar generador de imágenes
+        run: |
+          python generar_imagenes_desde_matriz.py
+
+      - name: Guardar imágenes como artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: imagenes_de_incendio
+          path: fire_dataset/
